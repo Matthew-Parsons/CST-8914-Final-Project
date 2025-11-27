@@ -46,15 +46,22 @@
             to schedule a call with our sales team! </p>
         </div>
       </div>
-
-      <div class="container">
-        <label>Business Name: </label> <input type="text">
-        <br><label>Phone number (613-123-1234):</label> <input type="tel">
-        <br><label>Email: (required)</label> <input type="email">
-        <br><label>What would you like to talk about: </label>
-        <br><input type="checkbox"> <label>Awareness lab days  and workshops</label>
-        <br><input type="checkbox"> <label>Invite a speaker with disabilities to your event</label>
-        <br><input type="checkbox"> <label>Usability testing</label> 
+      <div class="container" id="scheduleForm">
+        <form>
+          <label>Business Name: </label> <input type="text">
+          <br><label>Phone number (613-123-1234):</label> <input type="tel">
+          <br><label>Email: (required)</label> <input type="email">
+          <fieldset>
+            <legend>What would you like to talk about: </legend>
+              <input type="checkbox" id="awareness" name="awareness"> <label for="awareness">Awareness lab days  and workshops</label>
+              <br><input type="checkbox" id="invite" name="invite" onclick="showHideForm()"> <label for="invite">Invite a speaker with disabilities to your event</label>
+              <br><input type="checkbox" id="usability" name="usability"> <label for="usability">Usability testing</label> 
+          </fieldset>
+          <div id="hiddenTextArea">
+            <label for="eventInfo">Tell us about your event:</label><br>
+            <textarea id="eventInfo" rows="4" cols="50"></textarea>
+          </div>
+        </form>
 
         <hr>
       </div> <!-- /container -->
