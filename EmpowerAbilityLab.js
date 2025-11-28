@@ -107,6 +107,7 @@ else if (id === "schedule") {
   
   handleHashChange();
 });
+
 const inviteCb = document.getElementById("invite");
 const textArea = document.getElementById("hiddenTextArea");
 inviteCb.addEventListener('click', function() {
@@ -136,45 +137,4 @@ function toggleSwitch(){
     }
   }
 
-const navLinks = document.querySelectorAll('.nav-link');
 
-// Get all content sections
-const contentSections = document.querySelectorAll('.page');
-
-// Function to hide all sections
-function hideAllSections() {
-    contentSections.forEach(section => {
-        section.style.display = 'none';
-    });
-}
-
-// Function to show a specific section
-function showSection(targetId) {
-    const targetSection = document.getElementById(targetId);
-    if (targetSection) {
-        targetSection.style.display = 'block'; // or 'flex', 'grid', etc.
-    }
-}
-
-// Add click event listeners to navigation links
-navLinks.forEach(link => {
-    link.addEventListener('click', function(event) {
-        // Prevent default anchor link behavior (page jump/reload)
-        event.preventDefault();
-
-        // Get the ID of the target section from the data-target attribute
-        const targetId = this.getAttribute('data-target');
-
-        // Hide all sections first
-        hideAllSections();
-
-        // Show the target section
-        showSection(targetId);
-    });
-});
-
-// Optional: Ensure the default home section is visible on page load
-document.addEventListener('DOMContentLoaded', (event) => {
-    hideAllSections();
-    showSection('home-page');
-});
