@@ -65,11 +65,11 @@
             <label for="eventInfo">Tell us about your event:</label><br>
             <textarea id="eventInfo" rows="4" cols="50"></textarea>
           </div>
-          
-          <input type="checkbox" id="email_switch" class="hidden-checkbox" onchange="toggleSwitch()">
-          <label for="email_switch" tabindex="0" onkeydown="toggleSwitchKey(event)"><img id="switch" class="custom-checkbox-label" src="images/off.jpg" ></label>
-          <label for="email_switch">Receive emails about updates and services</label>
-          
+
+          <div id="email_switch" class="switch-inline-element" name="email_switch" role="checkbox" aria-checked="false" tabindex="0" aria-label="Receive emails about updates and services" onclick="toggleSwitch()" onkeydown="toggleSwitchKey(event)"><img  id="switch" class="custom-checkbox-label" src="images/off.jpg" ></div>
+          <p class="switch-inline-element">Receive emails about updates and services</p>
+      
+
           <br><input type="submit" value="Schedule a call">
         </form>
         <hr>

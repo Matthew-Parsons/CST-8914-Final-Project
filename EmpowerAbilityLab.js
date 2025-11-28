@@ -16,12 +16,15 @@ function showHideForm() {
 function toggleSwitch(){
     var toggleCheckbox = document.getElementById("email_switch");
     var toggleImg = document.getElementById("switch");
-    
-    if (toggleCheckbox.checked){                            
-        toggleImg.src = "images/on.jpg";
-    }else{
-        toggleImg.src = "images/off.jpg"
-    }
+    var isChecked = toggleCheckbox.getAttribute('aria-checked');
+
+  if (isChecked === 'true') {
+    toggleCheckbox.setAttribute('aria-checked', 'false');
+    toggleImg.src = "images/off.jpg"
+  } else {
+    toggleCheckbox.setAttribute('aria-checked', 'true');
+    toggleImg.src = "images/on.jpg";
+  }
 }
 function toggleSwitchKey(event){
     var toggleCheckbox = document.getElementById("email_switch");
