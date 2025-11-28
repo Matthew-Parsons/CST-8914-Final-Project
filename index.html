@@ -70,7 +70,19 @@
               And help you find answers on: How do people with disabilities use technology and navigate the digital world? 
               What tools do they employ?
             </p>
-            <button type="button">Meet the Empower Community!</button>
+              <button popovertarget="modal">Meet the Empower Community!</button>
+            <div id="modal" class="" popover>
+              <h2>Community Steering Committee</h2> 
+                <p>We get an aha! moments from product managers who try our services for the first time. We offered many lab days, workshops and offered usability testing services to many companies and organizations including:</p>
+                <ul>
+                  <li>McGill University</li>	
+                  <li>Walmart.ca</li>	
+                  <li>Apple.ca</li>
+                  <li>Google.ca</li>
+                  <li>Government of Canada</li>
+                </ul>
+                <button popovertarget="modal">Close</button>
+          </div>
           </div>
         </div>
 
@@ -182,9 +194,6 @@
 
       <label for="phoneNumber">Phone number (613-123-1234):</label>
       <input type="tel" id="phoneNumber" name="phoneNumber">
-
-          <div id="email_switch" class="switch-inline-element" name="email_switch" role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="switch-label"><img  id="switch" alt="" class="custom-checkbox-label" src="images/off.jpg" ></div>
-          <label class="switch-inline-element" id="switch-label">Receive emails about updates and services</label> 
       
       <br>
 
@@ -212,6 +221,10 @@
         <label for="eventInfo">Tell us about your event:</label><br>
         <textarea id="eventInfo" name="eventInfo" rows="4" cols="50"></textarea>
       </div>
+
+      <div id="email_switch" class="switch-inline-element" name="email_switch" role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="switch-label"><img  id="switch" alt="" class="custom-checkbox-label" src="images/off.jpg" ></div>
+      <label class="switch-inline-element" id="switch-label">Receive emails about updates and services</label> 
+      <br><button type="submit">Submit</button>
     </form>
 
     <hr>
