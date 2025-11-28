@@ -1,5 +1,5 @@
 // EmpowerAbilityLab.js
-// Simple SPA: show/hide sections + move focus
+// SPA: show/hide sections + move focus + back button support
 
 document.addEventListener("DOMContentLoaded", function () {
   const sections = {
@@ -9,15 +9,18 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   const links = document.querySelectorAll(".js-spa-link");
-  const status = document.getElementById("spa-status");
+  const status = document.getElementById("spa-status"); 
+  const DEFAULT_VIEW_ID = "home";
 
   function showSection(id) {
-    const target = sections[id] || sections.home;
+    const target = sections[id] || sections[DEFAULT_VIEW_ID];
+    if (!target) return;
 
     // Hide all sections except the target
     Object.keys(sections).forEach(key => {
-      if (!sections[key]) return;
-      sections[key].hidden = sections[key] !== target;
+      const section = sections[key];
+      if (!section) return;
+      section.hidden = section !== target;
     });
 
     // Update aria-current on nav links
@@ -50,11 +53,18 @@ document.addEventListener("DOMContentLoaded", function () {
         { once: true }
       );
 
-      // Announce for screen readers
+      //  screen reader announcement
       if (status) {
         status.textContent = heading.textContent + " section loaded";
       }
     }
+  }
+
+  // Handle hash changes (Back/Forward buttons)
+  function handleHashChange() {
+    const hash = window.location.hash.replace("#", "");
+    const targetId = hash || DEFAULT_VIEW_ID;
+    showSection(targetId);
   }
 
   // Hook up nav links
@@ -63,10 +73,21 @@ document.addEventListener("DOMContentLoaded", function () {
       event.preventDefault();
       const targetId = link.dataset.target;
       if (!targetId) return;
-      showSection(targetId);
+
+      // Change the hash – this creates a history entry
+      const newHash = "#" + targetId;
+      if (window.location.hash !== newHash) {
+        window.location.hash = newHash; // this will trigger handleHashChange()
+      } else {
+        
+        showSection(targetId);
+      }
     });
   });
 
-  // Initial state: show home
-  showSection("home");
+  // Listen for Back/Forward
+  window.addEventListener("hashchange", handleHashChange);
+
+  
+  handleHashChange();
 });
