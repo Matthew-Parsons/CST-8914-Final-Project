@@ -1,106 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Foster understanding and promote inclusive digital experiences for all">
     <meta name="author" content="">
+    
     <!-- Bootstrap core CSS -->
     <link href="https://getbootstrap.com/docs/4.0/examples/jumbotron/jumbotron.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <!-- Custom styles for Empower Ability Labs -->
     <link rel="stylesheet" href="EmpowerAbilityLab.css"> 
-
   </head>
 
   <body>
-    <div  class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <!-- removed unecessary link -->  
-      <!-- <a class="navbar-brand" href="https://www.google.ca/"></a> -->
-      <!-- Main Navigation for Empower Ability Labs-->
+
+    <div class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="https://www.google.ca/"></a>
+
+      <!-- Main Navigation -->
       <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-target="home-page">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-target="services-page">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-target="schedule-page">Schedule a call</a>
-            </li>
-          </ul>
+  <li class="nav-item">
+    <a class="nav-link js-spa-link"
+       href="#home"
+       data-target="home"
+       aria-current="page">
+      Home
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link js-spa-link"
+       href="#services"
+       data-target="services">
+      Services
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link js-spa-link"
+       href="#schedule"
+       data-target="schedule">
+      Schedule a call
+    </a>
+  </li>
+</ul>
         </div>
       </nav>
     </div>
+
+    <div id="spa-status" class="sr-only" aria-live="polite"></div>
     <main>
-      <!-- Main landing view -->
-      <div id="home-page" class="page">
-      <div class="jumbotron">
-        <div class="container">
-          <h1>Welcome to Empower Ability Labs!</h1>
-          <p>Empower Ability Labs is a hub for learning and empathy-building.  
-            We are on a mission to foster understanding and promote inclusive digital experiences for all. 
-            We offer a range of services designed to promote accessibility awareness, drive inclusivity, and enhance the user experience. 
-            And help you find answers on How do people with disabilities use technology and navigate the digital world? What tools do they employ? </p>
-          <button popovertarget="modal">Meet the Empower Community!</button>
-          <div id="modal" class="" popover>
-            <h2>Community Steering Committee</h2> 
-              <p>We get an aha! moments from product managers who try our services for the first time. We offered many lab days, workshops and offered usability testing services to many companies and organizations including:</p>
-              <ul>
-                <li>McGill University</li>	
-                <li>Walmart.ca</li>	
-                <li>Apple.ca</li>
-                <li>Google.ca</li>
-                <li>Government of Canada</li>
-              </ul>
-              <button popovertarget="modal">Close</button>
+      <section id="home" aria-labelledby="home-heading" class="spa-view">
+
+        <div class="jumbotron">
+          <div class="container">
+            <h1 class="h2" id="home-heading">Welcome to Empower Ability Labs!</h1>
+            <p>
+              Empower Ability Labs is a hub for learning and empathy-building.  
+              We are on a mission to foster understanding and promote inclusive digital experiences for all. 
+              We offer a range of services designed to promote accessibility awareness, drive inclusivity, 
+              and enhance the user experience. 
+              And help you find answers on: How do people with disabilities use technology and navigate the digital world? 
+              What tools do they employ?
+            </p>
+            <button type="button">Meet the Empower Community!</button>
           </div>
         </div>
-      </div>
 
-      <div class="container">
-        <!-- Example row of columns -->
-        <div class="row">
-          <div class="col-md-4">
+        <div class="container">
+
+          <div class="row">
+
+            <div class="col-md-4">
               <h2>Our Approach</h2>
-              <p>Empower Ability Labs utilizes a hands-on approach to raise awareness and promote empathy. 
+              <p>
+                Empower Ability Labs utilizes a hands-on approach to raise awareness and promote empathy. 
                 Our immersive workshops and lab days provide participants with a unique opportunity to step 
                 into the shoes of individuals with disabilities and navigate the world from their perspective. 
-                <br><a href="https://www.google.com/search/howsearchworks/our-approach/">Learn more</a></p>
-          </div>
-          <div class="col-md-4">
+                <br><a href="https://www.google.com/search/howsearchworks/our-approach/">Learn more</a>
+              </p>
+            </div>
+
+            <div class="col-md-4">
               <h2>Services</h2>
-              <p>Promote accessibility awareness and enhance the user experience. 
+              <p>Promote accessibility awareness and enhance the user experience.</p>
+
               <ul>
                 <li>Empathy lab days and workshops</li>
                 <li>Go beyond WCAG compliance!</li>
                 <li>Inspirational speakers.</li>
               </ul>
+
               <a href="https://www.google.com/search/howsearchworks/our-approach/">Learn more</a>
-              </p>
-          </div>
-          <div class="col-md-4">
+            </div>
+
+            <div class="col-md-4">
               <h2>Testimonials</h2>
-              <p>Invite a speaker with disabilities to share their unique journey. 
+              <p>
+                Invite a speaker with disabilities to share their unique journey. 
                 This captivating addition to your upcoming event will offer insights that resonate,  
-                inspire, educate, and enrich your team’s understanding of inclusion.
+                inspire, educate, and enrich your team's understanding of inclusion.
                 <br><a href="https://dictionary.cambridge.org/us/dictionary/english/testimonial">Learn more</a>
               </p>
+            </div>
+
           </div>
-        </div>
-        <hr>
+
+          <hr>
 
         </div> <!-- /container -->
-      </div>
 
-      <div id="services-page" class="page">
+      </section>
+      <!-- Services Page-->
+      <section id="services" aria-labelledby="services-heading" class="spa-view" hidden>
+
+    
+    <!-- Main landing view -->
       <div class="jumbotron">
         <div class="container">
-          <h1>Services</h1>
+          <h1 id="services-heading" class="h2">Services</h1>
           <p>Dedicated space or programs designed to cultivate empathy 
             and understanding among individuals towards the challenges 
             faced by people with disabilities in using technology and 
@@ -123,7 +148,7 @@
         <p>Go beyond WCAG! Involve individuals with disabilities in usability 
             testing to gather valuable insights for refining product strategy 
             and identifying accessibility concerns at an early stage when 
-             solutions are more feasible and cost-effective. You have access to a 
+            solutions are more feasible and cost-effective. You have access to a 
             diverse community of people with disabilities, who use various 
             assistive technologies. With technical expertise ranging from novice 
             to expert, our community can support your product lifecycle from user 
@@ -131,50 +156,73 @@
         <hr>
 
       </div> <!-- /container -->
-      </div>
+  </section>
+<!-- Call Page -->
+<section id="schedule" aria-labelledby="schedule-heading" class="spa-view" hidden>
+  
 
+  <div class="jumbotron">
+    <div class="container">
+      <h1 id="schedule-heading" class="h2">Schedule a Call</h1>
+      <p>
+        At Empower Ability Labs, we are dedicated to cultivating empathy and 
+        driving positive change through immersive experiences.  
+        Fill out the form below and we’ll get back to you as soon as we can 
+        to schedule a call with our sales team!
+      </p>
+    </div>
+  </div>
 
-      <div id="schedule-page" class="page">
-      <div  class="jumbotron">
-        <div class="container">
-          <h1 class="h2">Schedule a call</h1>
-          <p>At Empower Ability Labs, we are dedicated to cultivating empathy and 
-            driving positive change through immersive experiences.  
-            Fill out the form below and we’ll get back to you as soon as we can 
-            to schedule a call with our sales team! </p>
-        </div>
-      </div>
+  <div class="container" id="scheduleForm">
+    <form>
+      <label for="businessName">Business Name:</label>
+      <input type="text" id="businessName" name="businessName">
 
-      <div class="container">
-        <form>
-          <label for="name">Business Name: </label> <input id="name" name="name" type="text">
-          <br><label for="phone_number">Phone number (613-123-1234):</label> <input id="phone_number" name="phone_number" type="text">
-          <br><label for="email">Email: (required)</label> <input id="email" name="email" type="text" required>
-       
-          <fieldset>
-            <legend>What would you like to talk about: </legend>
-              <input type="checkbox" id="awareness" name="awareness"> <label for="awareness">Awareness lab days  and workshops</label>
-              <br><input type="checkbox" id="invite" name="invite"> <label for="invite">Invite a speaker with disabilities to your event</label>
-              <br><input type="checkbox" id="usability" name="usability"> <label for="usability">Usability testing</label> 
-          </fieldset>
-          <div id="hiddenTextArea">
-            <label for="eventInfo">Tell us about your event:</label><br>
-            <textarea id="eventInfo" rows="4" cols="50"></textarea>
-          </div>
+      <br>
+
+      <label for="phoneNumber">Phone number (613-123-1234):</label>
+      <input type="tel" id="phoneNumber" name="phoneNumber">
 
           <div id="email_switch" class="switch-inline-element" name="email_switch" role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="switch-label"><img  id="switch" alt="" class="custom-checkbox-label" src="images/off.jpg" ></div>
           <label class="switch-inline-element" id="switch-label">Receive emails about updates and services</label> 
       
+      <br>
 
-          <br><input type="submit" value="Schedule a call">
-        </form>
-        <hr>
-      </div> <!-- /container -->
+      <label for="email">Email: (required)</label>
+      <input type="email" id="email" name="email" required>
+
+      <fieldset>
+        <legend>What would you like to talk about:</legend>
+
+        <input type="checkbox" id="awareness" name="awareness">
+        <label for="awareness">Awareness lab days and workshops</label>
+
+        <br>
+
+        <input type="checkbox" id="invite" name="invite" onclick="showHideForm()">
+        <label for="invite">Invite a speaker with disabilities to your event</label>
+
+        <br>
+
+        <input type="checkbox" id="usability" name="usability">
+        <label for="usability">Usability testing</label> 
+      </fieldset>
+
+      <div id="hiddenTextArea">
+        <label for="eventInfo">Tell us about your event:</label><br>
+        <textarea id="eventInfo" name="eventInfo" rows="4" cols="50"></textarea>
       </div>
+    </form>
+
+    <hr>
+  </div> <!-- /container -->
+</section>
 
     </main>
 
     <footer class="container">
+
+    <script src="EmpowerAbilityLab.js"></script>
      <p>© Copyright Empower Ability Labs Inc 2023. All rights reserved. </p>
     </footer>
 
