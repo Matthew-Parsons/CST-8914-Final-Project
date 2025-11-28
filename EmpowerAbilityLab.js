@@ -12,11 +12,27 @@ document.addEventListener("DOMContentLoaded", function () {
   const status = document.getElementById("spa-status"); 
   const DEFAULT_VIEW_ID = "home";
 
+
   function showSection(id) {
     const target = sections[id] || sections[DEFAULT_VIEW_ID];
+
+    
+  // switches the page title 
+  if (id === "home") {
+  document.title = "Home Page";
+} 
+else if (id === "services") {
+  document.title = "Our Services";
+} 
+else if (id === "schedule") {
+  document.title = "Contact Us Page";
+}
+
+
+
     if (!target) return;
 
-    // Hide all sections except the target
+    // Hide all sections except the current
     Object.keys(sections).forEach(key => {
       const section = sections[key];
       if (!section) return;
@@ -74,10 +90,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const targetId = link.dataset.target;
       if (!targetId) return;
 
-      // Change the hash – this creates a history entry
+      // Change the hash , creates a history entry
       const newHash = "#" + targetId;
       if (window.location.hash !== newHash) {
-        window.location.hash = newHash; // this will trigger handleHashChange()
+        window.location.hash = newHash; 
       } else {
         
         showSection(targetId);
@@ -85,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Listen for Back/Forward
+  
   window.addEventListener("hashchange", handleHashChange);
 
   
