@@ -13,15 +13,31 @@ function showHideForm() {
     }
 }
 
-function showCloseModal(){
-    const openModal = document.querySelector("[data-open-modal]");
-    const closeModal = document.querySelector("[data-close-modal]");
-    const modal = document.querySelector("[data-modal]");
+function toggleSwitch(){
+    var toggleCheckbox = document.getElementById("email_switch");
+    var toggleImg = document.getElementById("switch");
+    
+    if (toggleCheckbox.checked){                            
+        toggleImg.src = "images/on.jpg";
+    }else{
+        toggleImg.src = "images/off.jpg"
+    }
+}
+function toggleSwitchKey(event){
+    var toggleCheckbox = document.getElementById("email_switch");
+    var toggleImg = document.getElementById("switch");
 
-    openModal.addEventListener("click", () => {
-        modal.showModal()
-    })
-    closeModal.addEventListener("click", () => {
-        modal.closest()
-    })
+    if (event.key === " " || event.key === 'Enter') {
+      // Prevent the default action (if any)
+      event.preventDefault();
+      // Manually toggle the checked state of the associated checkbox
+      toggleCheckbox.checked = !toggleCheckbox.checked;
+    if (toggleCheckbox.checked){                            
+        toggleImg.src = "images/on.jpg";
+    }else{
+        toggleImg.src = "images/off.jpg"
+    }
+    }
+    
+
 }

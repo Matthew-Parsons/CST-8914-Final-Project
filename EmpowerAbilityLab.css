@@ -64,3 +64,14 @@ input:checked + .slider:before {
 #hiddenTextArea {
     display: none;
 }
+
+.hidden-checkbox {
+    display: none;
+}
+
+.custom-checkbox-label {
+    display: inline-block;
+    width: 60px; 
+    height: auto; 
+    cursor: pointer;
+}
