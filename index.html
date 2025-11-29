@@ -57,18 +57,18 @@
               What tools do they employ?
             </p>
               <button popovertarget="modal">Meet the Empower Community!</button>
-            <div id="modal" role="dialog" aria-labelledby="dialog_label" aria-modal="true" popover>
-              <div role="document">
-              <h2 id="dialog_label">Community Steering Committee</h2> 
-                <p>We get an aha! moments from product managers who try our services for the first time. We offered many lab days, workshops and offered usability testing services to many companies and organizations including:</p>
-                <ul>
-                  <li>McGill University</li>	  
-                  <li>Walmart.ca</li>	
-                  <li>Apple.ca</li>
-                  <li>Google.ca</li>
-                  <li>Government of Canada</li>
-                </ul>
-              </div>
+            <div id="modal" role="dialog" aria-labelledby="dialog_label" aria-describedby="dialog_p" aria-modal="true" popover>
+              <h2 id="dialog_label">Community Steering Committee</h2>
+                <div id="dialog_p">
+                  <p >We get an aha! moments from product managers who try our services for the first time. We offered many lab days, workshops and offered usability testing services to many companies and organizations including:</p>
+                  <ul>
+                    <li>McGill University</li>	  
+                    <li>Walmart.ca</li>	
+                    <li>Apple.ca</li>
+                    <li>Google.ca</li>
+                    <li>Government of Canada</li>
+                    </ul>
+                </div> 
                 <button popovertarget="modal">Close</button>
           </div>
           </div>
@@ -164,7 +164,7 @@
 
   <div class="jumbotron">
     <div class="container">
-      <img class="pull-right" src="images/scheduleacall.png" width="143" height="160">
+      <img class="pull-right" alt="" src="images/scheduleacall.png" width="143" height="160">
       <h1 id="schedule-heading" class="h2">Schedule a Call</h1>
       <p>
         At Empower Ability Labs, we are dedicated to cultivating empathy and 
@@ -192,7 +192,7 @@
       <br>
 
       <label for="email">Email: (required)</label>
-      <input type="email" id="email" name="email">
+      <input type="email" id="email" name="email" placeholder="example@gmail.com">
 
       <fieldset>
         <legend>What would you like to talk about:</legend>

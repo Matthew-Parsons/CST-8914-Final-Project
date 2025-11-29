@@ -65,6 +65,10 @@ button:focus{
   }
 }
 
+[popover]:popover-open::backdrop {
+  background: rgb(190 190 190 / 50%); /* A semi-transparent gray */
+}
+
 #errorMsg {
   display: none;
   color: red;
@@ -72,4 +76,15 @@ button:focus{
 
 #tyMsg {
   display: none;
+}
+
+.col-md-4 a{
+ color: rgb(0, 0, 155);
+ text-decoration: underline;
+}
+
+.col-md-4 a:visited {
+  color: rgb(80, 0, 80);
+  background-color: transparent;
+  text-decoration: underline;
 }
