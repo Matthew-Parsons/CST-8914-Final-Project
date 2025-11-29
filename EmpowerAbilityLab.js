@@ -191,3 +191,9 @@ function toggleSwitch(){
   errorMessage.style.display = 'none';
   tyMsg.style.display = 'block';
 });
+
+const burgerNav = document.getElementById("burgerNav");
+const navBar = document.getElementById("navbarNav");
+document.addEventListener("click", function(){
+  navBar.classList.toggle("collapse");
+})
