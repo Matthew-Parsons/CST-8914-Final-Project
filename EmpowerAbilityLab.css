@@ -39,11 +39,6 @@ button:focus{
   text-decoration: underline;
 }
 
-.navbar-light .navbar-toggler {
-  position: fixed;
-  top: 17px;
-  right: 10px;
-}
 
 [role="dialog"] {
   box-sizing: border-box;
