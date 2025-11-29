@@ -32,7 +32,7 @@ button:focus{
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: white;
+  color: black;
 }
 
 .navbar-light .navbar-nav .nav-link.active {
