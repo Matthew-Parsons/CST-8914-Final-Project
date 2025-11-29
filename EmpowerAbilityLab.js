@@ -194,6 +194,6 @@ function toggleSwitch(){
 
 const burgerNav = document.getElementById("burgerNav");
 const navBar = document.getElementById("navbarNav");
-document.addEventListener("click", function(){
+burgerNav.addEventListener("click", function(){
   navBar.classList.toggle("collapse");
 })
