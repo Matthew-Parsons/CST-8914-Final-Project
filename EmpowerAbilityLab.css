@@ -10,6 +10,10 @@
   float: right;
 }
 
+button:focus{
+    outline: 2px solid #0000ff;
+}
+
 .custom-checkbox-label {
     display: inline-block;
     width: 60px; 
