@@ -64,3 +64,12 @@ button:focus{
   }
 }
 
+#errorMsg {
+  display: none;
+  color: red;
+}
+
+#tyMsg {
+  display: none;
+}
+

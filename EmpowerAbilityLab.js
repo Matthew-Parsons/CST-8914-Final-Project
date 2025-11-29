@@ -168,3 +168,26 @@ function toggleSwitch(){
         }
     });
     previouslyFocusedElement.focus();
+
+  document.getElementById('schedForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent default form submission
+  
+  const emailInput = document.getElementById('email');
+  const errorMessage = document.getElementById('errorMsg');
+  const tyMsg = document.getElementById('tyMsg');
+
+  // Basic validation using the browser's built-in checkValidity() method
+  if (!emailInput.checkValidity()) {
+    errorMessage.style.display = 'block'; // Show error message
+    return; // Stop further execution
+  }
+
+  // More advanced validation using a regular expression (optional)
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(emailInput.value)) {
+    errorMessage.style.display = 'block';
+    return;
+  }
+  errorMessage.style.display = 'none';
+  tyMsg.style.display = 'block';
+});
