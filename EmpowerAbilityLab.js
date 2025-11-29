@@ -196,4 +196,4 @@ const burgerNav = document.getElementById("burgerNav");
 const navBar = document.getElementById("navbarNav");
 burgerNav.addEventListener("click", function(){
   navBar.classList.toggle("collapse");
-})
+});
