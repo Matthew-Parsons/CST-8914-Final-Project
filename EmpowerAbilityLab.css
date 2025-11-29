@@ -6,6 +6,10 @@
     display: none;
 }
 
+.pull-right {
+  float: right;
+}
+
 .custom-checkbox-label {
     display: inline-block;
     width: 60px; 
