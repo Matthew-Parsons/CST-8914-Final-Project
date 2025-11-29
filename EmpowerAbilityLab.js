@@ -44,7 +44,10 @@ else if (id === "schedule") {
       const isCurrent = link.dataset.target === id;
       if (isCurrent) {
         link.setAttribute("aria-current", "page");
+        link.classList.add("active");
+        
       } else {
+        link.classList.remove("active");
         link.removeAttribute("aria-current");
       }
     });
