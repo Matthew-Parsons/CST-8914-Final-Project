@@ -72,6 +72,7 @@
             </p>
               <button popovertarget="modal">Meet the Empower Community!</button>
             <div id="modal" role="dialog" aria-labelledby="dialog_label" aria-modal="true" popover>
+              <div role="document">
               <h2 id="dialog_label">Community Steering Committee</h2> 
                 <p>We get an aha! moments from product managers who try our services for the first time. We offered many lab days, workshops and offered usability testing services to many companies and organizations including:</p>
                 <ul>
@@ -81,6 +82,7 @@
                   <li>Google.ca</li>
                   <li>Government of Canada</li>
                 </ul>
+              </div>
                 <button popovertarget="modal">Close</button>
           </div>
           </div>
@@ -186,7 +188,11 @@
   </div>
 
   <div class="container" id="scheduleForm">
-    <form>
+    <br>
+    <div id="errorMsg"><ul><li>Error: Please enter a valid email address</li></ul></div>
+    <div id="tyMsg"><h3>Thank you! Your message has been sent</h3></div>
+    <br>
+    <form id="schedForm">
       <label for="businessName">Business Name:</label>
       <input type="text" id="businessName" name="businessName">
 
@@ -198,7 +204,7 @@
       <br>
 
       <label for="email">Email: (required)</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email">
 
       <fieldset>
         <legend>What would you like to talk about:</legend>
