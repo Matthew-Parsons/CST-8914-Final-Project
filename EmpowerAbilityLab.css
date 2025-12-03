@@ -11,7 +11,7 @@
 }
 
 button:focus{
-    outline: 2px solid #0000ff;
+    outline: 4px solid #cf9604;
 }
 
 .custom-checkbox-label {
@@ -87,4 +87,11 @@ button:focus{
   color: rgb(80, 0, 80);
   background-color: transparent;
   text-decoration: underline;
+}
+
+#schedForm fieldset{
+  border: 1px solid #000;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
