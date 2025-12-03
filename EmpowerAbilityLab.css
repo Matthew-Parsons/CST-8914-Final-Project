@@ -11,12 +11,10 @@
 }
 
 button:focus{
-    outline: 4px solid #045fcf;
+    outline: 3px solid blue;
 }
 
-:focus{
-  outline: 2px solid #045fcf;
-}
+
 
 .custom-checkbox-label {
     display: inline-block;
