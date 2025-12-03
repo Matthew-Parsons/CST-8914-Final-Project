@@ -176,6 +176,9 @@ function toggleSwitch(){
   const errorMessage = document.getElementById('errorMsg');
   const tyMsg = document.getElementById('tyMsg');
 
+  errorMessage.style.display = 'none';
+  tyMsg.style.display = 'none';
+
   // Basic validation using the browser's built-in checkValidity() method
   if (!emailInput.checkValidity()) {
     errorMessage.style.display = 'block'; // Show error message
@@ -188,8 +191,9 @@ function toggleSwitch(){
     errorMessage.style.display = 'block';
     return;
   }
-  errorMessage.style.display = 'none';
+
   tyMsg.style.display = 'block';
+  
 });
 
 const burgerNav = document.getElementById("burgerNav");
