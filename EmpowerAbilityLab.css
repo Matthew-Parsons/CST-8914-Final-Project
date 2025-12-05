@@ -39,6 +39,10 @@ button:focus{
   text-decoration: underline;
 }
 
+dialog{
+  display:none;
+}
+
 
 [role="dialog"] {
   box-sizing: border-box;
