@@ -140,34 +140,6 @@ function toggleSwitch(){
     }
   }
 
-    const modalDiv = document.getElementById("modal");
-    const focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]';
-    const focusableElements = modalDiv.querySelectorAll(focusableElementsString);
-    const firstFocusableElement = focusableElements[0];
-    const lastFocusableElement = focusableElements[focusableElements.length - 1];
-    let previouslyFocusedElement = document.activeElement;
-    firstFocusableElement.focus();
-
-      modalDiv.addEventListener('keydown', function(e) {
-        const isTabPressed = e.key === 'Tab' || e.keyCode === 9;
-
-        if (!isTabPressed) {
-            return;
-        }
-
-        if (e.shiftKey) { // Shift + Tab
-            if (document.activeElement === firstFocusableElement) {
-                lastFocusableElement.focus();
-                e.preventDefault();
-            }
-        } else { // Tab
-            if (document.activeElement === lastFocusableElement) {
-                firstFocusableElement.focus();
-                e.preventDefault();
-            }
-        }
-    });
-    previouslyFocusedElement.focus();
 
   document.getElementById('schedForm').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent default form submission
@@ -201,3 +173,18 @@ const navBar = document.getElementById("navbarNav");
 burgerNav.addEventListener("click", function(){
   navBar.classList.toggle("collapse");
 });
+
+const modalBtn = document.getElementById("modalBtn");
+const closeBtn = document.getElementById("closeBtn");
+const modal = document.getElementById("modal");
+
+modalBtn.addEventListener("click", function(){
+  modal.showModal();
+  modal.style.display = "block";
+});
+
+closeBtn.addEventListener("click", function(){
+  modal.close();
+  modal.style.display = "none";
+});
+
